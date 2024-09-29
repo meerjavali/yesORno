@@ -1,8 +1,9 @@
 <div class="image main" >
-    <h1 *ngIf="!flag">type of a question?</h1>
+    <h1 *ngIf="!flag">will you walk to home with me?</h1>
     <div class="buttons" *ngIf="!flag">
       <button type="button"  (click)="tell()">Yes</button>
-      <button type="button" [ngStyle]="{'position':'absolute','top.px': positionY , 'left.px': positionX}" (mouseover)="move()" #no>No</button>
+      <button type="button"  *ngIf="mouseFlag" (mouseover)="move()">No</button>
+      <button type="button"  *ngIf="!mouseFlag" [ngStyle]="{'position':'absolute','top.px': positionY , 'left.px': positionX}" (mouseover)="move()" #no>No</button>
     </div>
     <div>
       <h1 *ngIf="flag">Thank you for the yes I am flying right now!!!!</h1>
