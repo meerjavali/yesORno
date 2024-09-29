@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'proposal';
+  flag=false;
+  @ViewChild('no',{static:true}) buttonNo : ElementRef;
+  positionX: number = 650;
+  positionY: number = 540;
+  tell(){
+  this.flag =true;
+  }
+  move(){
+    this.positionX = Math.random() * 500;
+    this.positionY = Math.random() * 500;
+  }
 }

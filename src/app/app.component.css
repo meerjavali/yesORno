@@ -1,0 +1,28 @@
+.image{
+    max-width: 100% !important;
+    height: 1000px !important;
+    background-image: url(../assets/bg-image.jpg);
+    background-size: cover;
+}
+.no_Class{
+
+}
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    flex-direction: column;
+
+}
+.main h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+.buttons{
+    display:flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: space-around;
+}
